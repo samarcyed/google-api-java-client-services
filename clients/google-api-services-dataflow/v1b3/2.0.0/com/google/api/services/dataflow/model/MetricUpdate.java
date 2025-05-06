@@ -17,7 +17,7 @@
 package com.google.api.services.dataflow.model;
 
 /**
- * Describes the state of a metric. Next ID: 14
+ * Describes the state of a metric.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataflow API. For a detailed explanation see:
@@ -28,6 +28,15 @@ package com.google.api.services.dataflow.model;
  */
 @SuppressWarnings("javadoc")
 public final class MetricUpdate extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Worker-computed aggregate value for the "Trie" aggregation kind. The only possible value type
+   * is a BoundedTrieNode. Introduced this field to avoid breaking older SDKs when Dataflow service
+   * starts to populate the `bounded_trie` field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Object boundedTrie;
 
   /**
    * True if this metric is reported as the total cumulative aggregate value accumulated since the
@@ -126,6 +135,27 @@ public final class MetricUpdate extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Worker-computed aggregate value for the "Trie" aggregation kind. The only possible value type
+   * is a BoundedTrieNode. Introduced this field to avoid breaking older SDKs when Dataflow service
+   * starts to populate the `bounded_trie` field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Object getBoundedTrie() {
+    return boundedTrie;
+  }
+
+  /**
+   * Worker-computed aggregate value for the "Trie" aggregation kind. The only possible value type
+   * is a BoundedTrieNode. Introduced this field to avoid breaking older SDKs when Dataflow service
+   * starts to populate the `bounded_trie` field.
+   * @param boundedTrie boundedTrie or {@code null} for none
+   */
+  public MetricUpdate setBoundedTrie(java.lang.Object boundedTrie) {
+    this.boundedTrie = boundedTrie;
+    return this;
+  }
 
   /**
    * True if this metric is reported as the total cumulative aggregate value accumulated since the

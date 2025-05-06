@@ -25,8 +25,11 @@ package com.google.api.services.merchantapi.products_v1beta.model;
  * required: feedLabel, contentLanguage and offerId. After inserting, updating, or deleting a
  * product input, it may take several minutes before the processed product can be retrieved. All
  * fields in the product input and its sub-messages match the English name of their corresponding
- * attribute in the vertical spec with [some
- * exceptions](https://support.google.com/merchants/answer/7052112).
+ * attribute in the [Products Data
+ * Specification](https://support.google.com/merchants/answer/188494) with [some
+ * exceptions](https://support.google.com/merchants/answer/7052112). The following reference
+ * documentation lists the field names in the **camelCase** casing style while the Products Data
+ * Specification lists the names in the **snake_case** casing style.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:
@@ -64,10 +67,10 @@ public final class ProductInput extends com.google.api.client.json.GenericJson {
    * Optional. A list of custom (merchant-provided) attributes. It can also be used for submitting
    * any attribute of the data specification in its generic form (for example, `{ "name": "size
    * type", "value": "regular" }`). This is useful for submitting attributes not explicitly exposed
-   * by the API, such as additional attributes used for Buy on Google. Maximum allowed number of
-   * characters for each custom attribute is 10240 (represents sum of characters for name and
-   * value). Maximum 2500 custom attributes can be set per product, with total size of 102.4kB.
-   * Underscores in custom attribute names are replaced by spaces upon insertion.
+   * by the API. Maximum allowed number of characters for each custom attribute is 10240 (represents
+   * sum of characters for name and value). Maximum 2500 custom attributes can be set per product,
+   * with total size of 102.4kB. Underscores in custom attribute names are replaced by spaces upon
+   * insertion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,9 +92,9 @@ public final class ProductInput extends com.google.api.client.json.GenericJson {
 
   /**
    * Identifier. The name of the product input. Format:
-   * `"{productinput.name=accounts/{account}/productInputs/{productinput}}"` where the last section
-   * `productinput` consists of 4 parts: channel~content_language~feed_label~offer_id example for
-   * product input name is "accounts/123/productInputs/online~en~US~sku123"
+   * `accounts/{account}/productInputs/{productinput}` where the last section `productinput`
+   * consists of 4 parts: `channel~content_language~feed_label~offer_id` example for product input
+   * name is `accounts/123/productInputs/online~en~US~sku123`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,20 +111,20 @@ public final class ProductInput extends com.google.api.client.json.GenericJson {
   private java.lang.String offerId;
 
   /**
-   * Output only. The name of the processed product. Format:
-   * `"{product.name=accounts/{account}/products/{product}}"`
+   * Output only. The name of the processed product. Format: `accounts/{account}/products/{product}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String product;
 
   /**
-   * Optional. Represents the existing version (freshness) of the product, which can be used to
-   * preserve the right order when multiple updates are done at the same time. If set, the insertion
-   * is prevented when version number is lower than the current version number of the existing
-   * product. Re-insertion (for example, product refresh after 30 days) can be performed with the
-   * current `version_number`. Only supported for insertions into primary data sources. If the
-   * operation is prevented, the aborted exception will be thrown.
+   * Optional. Immutable. Represents the existing version (freshness) of the product, which can be
+   * used to preserve the right order when multiple updates are done at the same time. If set, the
+   * insertion is prevented when version number is lower than the current version number of the
+   * existing product. Re-insertion (for example, product refresh after 30 days) can be performed
+   * with the current `version_number`. Only supported for insertions into primary data sources. Do
+   * not set this field for updates. Do not set this field for insertions into supplemental data
+   * sources. If the operation is prevented, the aborted exception will be thrown.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -184,10 +187,10 @@ public final class ProductInput extends com.google.api.client.json.GenericJson {
    * Optional. A list of custom (merchant-provided) attributes. It can also be used for submitting
    * any attribute of the data specification in its generic form (for example, `{ "name": "size
    * type", "value": "regular" }`). This is useful for submitting attributes not explicitly exposed
-   * by the API, such as additional attributes used for Buy on Google. Maximum allowed number of
-   * characters for each custom attribute is 10240 (represents sum of characters for name and
-   * value). Maximum 2500 custom attributes can be set per product, with total size of 102.4kB.
-   * Underscores in custom attribute names are replaced by spaces upon insertion.
+   * by the API. Maximum allowed number of characters for each custom attribute is 10240 (represents
+   * sum of characters for name and value). Maximum 2500 custom attributes can be set per product,
+   * with total size of 102.4kB. Underscores in custom attribute names are replaced by spaces upon
+   * insertion.
    * @return value or {@code null} for none
    */
   public java.util.List<CustomAttribute> getCustomAttributes() {
@@ -198,10 +201,10 @@ public final class ProductInput extends com.google.api.client.json.GenericJson {
    * Optional. A list of custom (merchant-provided) attributes. It can also be used for submitting
    * any attribute of the data specification in its generic form (for example, `{ "name": "size
    * type", "value": "regular" }`). This is useful for submitting attributes not explicitly exposed
-   * by the API, such as additional attributes used for Buy on Google. Maximum allowed number of
-   * characters for each custom attribute is 10240 (represents sum of characters for name and
-   * value). Maximum 2500 custom attributes can be set per product, with total size of 102.4kB.
-   * Underscores in custom attribute names are replaced by spaces upon insertion.
+   * by the API. Maximum allowed number of characters for each custom attribute is 10240 (represents
+   * sum of characters for name and value). Maximum 2500 custom attributes can be set per product,
+   * with total size of 102.4kB. Underscores in custom attribute names are replaced by spaces upon
+   * insertion.
    * @param customAttributes customAttributes or {@code null} for none
    */
   public ProductInput setCustomAttributes(java.util.List<CustomAttribute> customAttributes) {
@@ -230,9 +233,9 @@ public final class ProductInput extends com.google.api.client.json.GenericJson {
 
   /**
    * Identifier. The name of the product input. Format:
-   * `"{productinput.name=accounts/{account}/productInputs/{productinput}}"` where the last section
-   * `productinput` consists of 4 parts: channel~content_language~feed_label~offer_id example for
-   * product input name is "accounts/123/productInputs/online~en~US~sku123"
+   * `accounts/{account}/productInputs/{productinput}` where the last section `productinput`
+   * consists of 4 parts: `channel~content_language~feed_label~offer_id` example for product input
+   * name is `accounts/123/productInputs/online~en~US~sku123`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -241,9 +244,9 @@ public final class ProductInput extends com.google.api.client.json.GenericJson {
 
   /**
    * Identifier. The name of the product input. Format:
-   * `"{productinput.name=accounts/{account}/productInputs/{productinput}}"` where the last section
-   * `productinput` consists of 4 parts: channel~content_language~feed_label~offer_id example for
-   * product input name is "accounts/123/productInputs/online~en~US~sku123"
+   * `accounts/{account}/productInputs/{productinput}` where the last section `productinput`
+   * consists of 4 parts: `channel~content_language~feed_label~offer_id` example for product input
+   * name is `accounts/123/productInputs/online~en~US~sku123`
    * @param name name or {@code null} for none
    */
   public ProductInput setName(java.lang.String name) {
@@ -275,8 +278,7 @@ public final class ProductInput extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The name of the processed product. Format:
-   * `"{product.name=accounts/{account}/products/{product}}"`
+   * Output only. The name of the processed product. Format: `accounts/{account}/products/{product}`
    * @return value or {@code null} for none
    */
   public java.lang.String getProduct() {
@@ -284,8 +286,7 @@ public final class ProductInput extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The name of the processed product. Format:
-   * `"{product.name=accounts/{account}/products/{product}}"`
+   * Output only. The name of the processed product. Format: `accounts/{account}/products/{product}`
    * @param product product or {@code null} for none
    */
   public ProductInput setProduct(java.lang.String product) {
@@ -294,12 +295,13 @@ public final class ProductInput extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Represents the existing version (freshness) of the product, which can be used to
-   * preserve the right order when multiple updates are done at the same time. If set, the insertion
-   * is prevented when version number is lower than the current version number of the existing
-   * product. Re-insertion (for example, product refresh after 30 days) can be performed with the
-   * current `version_number`. Only supported for insertions into primary data sources. If the
-   * operation is prevented, the aborted exception will be thrown.
+   * Optional. Immutable. Represents the existing version (freshness) of the product, which can be
+   * used to preserve the right order when multiple updates are done at the same time. If set, the
+   * insertion is prevented when version number is lower than the current version number of the
+   * existing product. Re-insertion (for example, product refresh after 30 days) can be performed
+   * with the current `version_number`. Only supported for insertions into primary data sources. Do
+   * not set this field for updates. Do not set this field for insertions into supplemental data
+   * sources. If the operation is prevented, the aborted exception will be thrown.
    * @return value or {@code null} for none
    */
   public java.lang.Long getVersionNumber() {
@@ -307,12 +309,13 @@ public final class ProductInput extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Represents the existing version (freshness) of the product, which can be used to
-   * preserve the right order when multiple updates are done at the same time. If set, the insertion
-   * is prevented when version number is lower than the current version number of the existing
-   * product. Re-insertion (for example, product refresh after 30 days) can be performed with the
-   * current `version_number`. Only supported for insertions into primary data sources. If the
-   * operation is prevented, the aborted exception will be thrown.
+   * Optional. Immutable. Represents the existing version (freshness) of the product, which can be
+   * used to preserve the right order when multiple updates are done at the same time. If set, the
+   * insertion is prevented when version number is lower than the current version number of the
+   * existing product. Re-insertion (for example, product refresh after 30 days) can be performed
+   * with the current `version_number`. Only supported for insertions into primary data sources. Do
+   * not set this field for updates. Do not set this field for insertions into supplemental data
+   * sources. If the operation is prevented, the aborted exception will be thrown.
    * @param versionNumber versionNumber or {@code null} for none
    */
   public ProductInput setVersionNumber(java.lang.Long versionNumber) {

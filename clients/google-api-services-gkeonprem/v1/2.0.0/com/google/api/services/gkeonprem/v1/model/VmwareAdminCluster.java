@@ -20,7 +20,7 @@ package com.google.api.services.gkeonprem.v1.model;
  * Resource that represents a VMware admin cluster.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the GDC Virtual API. For a detailed explanation see:
+ * transmitted over HTTP when working with the GKE On-Prem API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -95,6 +95,13 @@ public final class VmwareAdminCluster extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
+
+  /**
+   * Enable advanced cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableAdvancedCluster;
 
   /**
    * Output only. The DNS name of VMware admin cluster's API server.
@@ -389,6 +396,23 @@ public final class VmwareAdminCluster extends com.google.api.client.json.Generic
    */
   public VmwareAdminCluster setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Enable advanced cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableAdvancedCluster() {
+    return enableAdvancedCluster;
+  }
+
+  /**
+   * Enable advanced cluster.
+   * @param enableAdvancedCluster enableAdvancedCluster or {@code null} for none
+   */
+  public VmwareAdminCluster setEnableAdvancedCluster(java.lang.Boolean enableAdvancedCluster) {
+    this.enableAdvancedCluster = enableAdvancedCluster;
     return this;
   }
 

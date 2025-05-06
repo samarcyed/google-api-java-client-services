@@ -25,7 +25,7 @@ package com.google.api.services.tasks;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://developers.google.com/tasks/" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/workspace/tasks/" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -1471,7 +1471,7 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Returns all tasks in the specified task list. Does not return assigned tasks be default (from
+     * Returns all tasks in the specified task list. Doesn't return assigned tasks by default (from
      * Docs, Chat Spaces). A user can have up to 20,000 non-hidden tasks per list and up to 100,000
      * tasks in total at a time.
      *
@@ -1494,7 +1494,7 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "tasks/v1/lists/{tasklist}/tasks";
 
       /**
-       * Returns all tasks in the specified task list. Does not return assigned tasks be default (from
+       * Returns all tasks in the specified task list. Doesn't return assigned tasks by default (from
        * Docs, Chat Spaces). A user can have up to 20,000 non-hidden tasks per list and up to 100,000
        * tasks in total at a time.
        *

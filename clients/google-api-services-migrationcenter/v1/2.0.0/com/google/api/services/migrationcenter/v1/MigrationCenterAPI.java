@@ -585,6 +585,29 @@ public class MigrationCenterAPI extends com.google.api.client.googleapis.service
         }
 
         /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> extraLocationTypes;
+
+        /** Optional. A list of extra location types that should be used as conditions for controlling the
+       visibility of the locations.
+         */
+        public java.util.List<java.lang.String> getExtraLocationTypes() {
+          return extraLocationTypes;
+        }
+
+        /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
+          this.extraLocationTypes = extraLocationTypes;
+          return this;
+        }
+
+        /**
          * A filter to narrow down results to a preferred subset. The filtering language accepts
          * strings like `"displayName=tokyo"`, and is documented in more detail in
          * [AIP-160](https://google.aip.dev/160).
@@ -1801,6 +1824,29 @@ public class MigrationCenterAPI extends com.google.api.client.googleapis.service
           /** A token identifying a page of results the server should return. */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * Optional. When this value is set to 'true,' the response will include all assets,
+           * including those that are hidden.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean showHidden;
+
+          /** Optional. When this value is set to 'true,' the response will include all assets, including those
+         that are hidden.
+           */
+          public java.lang.Boolean getShowHidden() {
+            return showHidden;
+          }
+
+          /**
+           * Optional. When this value is set to 'true,' the response will include all assets,
+           * including those that are hidden.
+           */
+          public List setShowHidden(java.lang.Boolean showHidden) {
+            this.showHidden = showHidden;
             return this;
           }
 

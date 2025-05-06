@@ -723,6 +723,29 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> extraLocationTypes;
+
+        /** Optional. A list of extra location types that should be used as conditions for controlling the
+       visibility of the locations.
+         */
+        public java.util.List<java.lang.String> getExtraLocationTypes() {
+          return extraLocationTypes;
+        }
+
+        /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
+          this.extraLocationTypes = extraLocationTypes;
+          return this;
+        }
+
+        /**
          * A filter to narrow down results to a preferred subset. The filtering language accepts
          * strings like `"displayName=tokyo"`, and is documented in more detail in
          * [AIP-160](https://google.aip.dev/160).
@@ -9188,6 +9211,28 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
             /** Page token. */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
+              return this;
+            }
+
+            /**
+             * Optional. If true, allow partial responses for multi-regional Aggregated List
+             * requests.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean returnPartialSuccess;
+
+            /** Optional. If true, allow partial responses for multi-regional Aggregated List requests.
+             */
+            public java.lang.Boolean getReturnPartialSuccess() {
+              return returnPartialSuccess;
+            }
+
+            /**
+             * Optional. If true, allow partial responses for multi-regional Aggregated List
+             * requests.
+             */
+            public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+              this.returnPartialSuccess = returnPartialSuccess;
               return this;
             }
 

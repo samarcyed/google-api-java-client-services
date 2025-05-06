@@ -445,6 +445,29 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
         }
 
         /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> extraLocationTypes;
+
+        /** Optional. A list of extra location types that should be used as conditions for controlling the
+       visibility of the locations.
+         */
+        public java.util.List<java.lang.String> getExtraLocationTypes() {
+          return extraLocationTypes;
+        }
+
+        /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
+          this.extraLocationTypes = extraLocationTypes;
+          return this;
+        }
+
+        /**
          * A filter to narrow down results to a preferred subset. The filtering language accepts
          * strings like `"displayName=tokyo"`, and is documented in more detail in
          * [AIP-160](https://google.aip.dev/160).
@@ -4083,6 +4106,29 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
           /** The Cloud Storage bucket name for custom rules. */
           public List setCustomRulesBucket(java.lang.String customRulesBucket) {
             this.customRulesBucket = customRulesBucket;
+            return this;
+          }
+
+          /**
+           * Optional. The evaluation type of the rules will be applied to. The Cloud Storage bucket
+           * name for custom rules.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String evaluationType;
+
+          /** Optional. The evaluation type of the rules will be applied to. The Cloud Storage bucket name for
+         custom rules.
+           */
+          public java.lang.String getEvaluationType() {
+            return evaluationType;
+          }
+
+          /**
+           * Optional. The evaluation type of the rules will be applied to. The Cloud Storage bucket
+           * name for custom rules.
+           */
+          public List setEvaluationType(java.lang.String evaluationType) {
+            this.evaluationType = evaluationType;
             return this;
           }
 

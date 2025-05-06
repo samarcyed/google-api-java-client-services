@@ -18,7 +18,7 @@ package com.google.api.services.compute.model;
 
 /**
  * Represents a Persistent Disk Snapshot resource. You can use snapshots to back up data on a
- * regular interval. For more information, read Creating persistent disk snapshots.
+ * regular interval. For more information, read Creating persistent disk snapshots. LINT.IfChange
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -189,6 +189,14 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * [Output Only] URL of the region where the snapshot resides. Only applicable for regional
+   * snapshots.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String region;
 
   /**
    * Output only. Reserved for future use.
@@ -747,6 +755,25 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
    */
   public Snapshot setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * [Output Only] URL of the region where the snapshot resides. Only applicable for regional
+   * snapshots.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegion() {
+    return region;
+  }
+
+  /**
+   * [Output Only] URL of the region where the snapshot resides. Only applicable for regional
+   * snapshots.
+   * @param region region or {@code null} for none
+   */
+  public Snapshot setRegion(java.lang.String region) {
+    this.region = region;
     return this;
   }
 

@@ -269,6 +269,18 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   private java.lang.String nullMarker;
 
   /**
+   * Optional. A list of strings represented as SQL NULL value in a CSV file. null_marker and
+   * null_markers can't be set at the same time. If null_marker is set, null_markers has to be not
+   * set. If null_markers is set, null_marker has to be not set. If both null_marker and
+   * null_markers are set at the same time, a user error would be thrown. Any strings listed in
+   * null_markers, including empty string would be interpreted as SQL NULL. This applies to all
+   * column types.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> nullMarkers;
+
+  /**
    * Optional. Additional properties to set if sourceFormat is set to PARQUET.
    * The value may be {@code null}.
    */
@@ -378,6 +390,16 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   private java.lang.Integer skipLeadingRows;
 
   /**
+   * Optional. Controls the strategy used to match loaded columns to the schema. If not set, a
+   * sensible default is chosen based on how the schema is provided. If autodetect is used, then
+   * columns are matched by name. Otherwise, columns are matched by position. This is done to keep
+   * the behavior backward-compatible.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceColumnMatch;
+
+  /**
    * Optional. The format of the data files. For CSV files, specify "CSV". For datastore backups,
    * specify "DATASTORE_BACKUP". For newline-delimited JSON, specify "NEWLINE_DELIMITED_JSON". For
    * Avro, specify "AVRO". For parquet, specify "PARQUET". For orc, specify "ORC". The default value
@@ -415,8 +437,8 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   private TimePartitioning timePartitioning;
 
   /**
-   * Optional. [Experimental] Default time zone that will apply when parsing timestamp values that
-   * have no specific time zone.
+   * Optional. Default time zone that will apply when parsing timestamp values that have no specific
+   * time zone.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -986,6 +1008,33 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
+   * Optional. A list of strings represented as SQL NULL value in a CSV file. null_marker and
+   * null_markers can't be set at the same time. If null_marker is set, null_markers has to be not
+   * set. If null_markers is set, null_marker has to be not set. If both null_marker and
+   * null_markers are set at the same time, a user error would be thrown. Any strings listed in
+   * null_markers, including empty string would be interpreted as SQL NULL. This applies to all
+   * column types.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getNullMarkers() {
+    return nullMarkers;
+  }
+
+  /**
+   * Optional. A list of strings represented as SQL NULL value in a CSV file. null_marker and
+   * null_markers can't be set at the same time. If null_marker is set, null_markers has to be not
+   * set. If null_markers is set, null_marker has to be not set. If both null_marker and
+   * null_markers are set at the same time, a user error would be thrown. Any strings listed in
+   * null_markers, including empty string would be interpreted as SQL NULL. This applies to all
+   * column types.
+   * @param nullMarkers nullMarkers or {@code null} for none
+   */
+  public JobConfigurationLoad setNullMarkers(java.util.List<java.lang.String> nullMarkers) {
+    this.nullMarkers = nullMarkers;
+    return this;
+  }
+
+  /**
    * Optional. Additional properties to set if sourceFormat is set to PARQUET.
    * @return value or {@code null} for none
    */
@@ -1237,6 +1286,29 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
+   * Optional. Controls the strategy used to match loaded columns to the schema. If not set, a
+   * sensible default is chosen based on how the schema is provided. If autodetect is used, then
+   * columns are matched by name. Otherwise, columns are matched by position. This is done to keep
+   * the behavior backward-compatible.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceColumnMatch() {
+    return sourceColumnMatch;
+  }
+
+  /**
+   * Optional. Controls the strategy used to match loaded columns to the schema. If not set, a
+   * sensible default is chosen based on how the schema is provided. If autodetect is used, then
+   * columns are matched by name. Otherwise, columns are matched by position. This is done to keep
+   * the behavior backward-compatible.
+   * @param sourceColumnMatch sourceColumnMatch or {@code null} for none
+   */
+  public JobConfigurationLoad setSourceColumnMatch(java.lang.String sourceColumnMatch) {
+    this.sourceColumnMatch = sourceColumnMatch;
+    return this;
+  }
+
+  /**
    * Optional. The format of the data files. For CSV files, specify "CSV". For datastore backups,
    * specify "DATASTORE_BACKUP". For newline-delimited JSON, specify "NEWLINE_DELIMITED_JSON". For
    * Avro, specify "AVRO". For parquet, specify "PARQUET". For orc, specify "ORC". The default value
@@ -1323,8 +1395,8 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. [Experimental] Default time zone that will apply when parsing timestamp values that
-   * have no specific time zone.
+   * Optional. Default time zone that will apply when parsing timestamp values that have no specific
+   * time zone.
    * @return value or {@code null} for none
    */
   public java.lang.String getTimeZone() {
@@ -1332,8 +1404,8 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. [Experimental] Default time zone that will apply when parsing timestamp values that
-   * have no specific time zone.
+   * Optional. Default time zone that will apply when parsing timestamp values that have no specific
+   * time zone.
    * @param timeZone timeZone or {@code null} for none
    */
   public JobConfigurationLoad setTimeZone(java.lang.String timeZone) {

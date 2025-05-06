@@ -61,6 +61,13 @@ public final class MirroringDeploymentGroup extends com.google.api.client.json.G
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Output only. The list of locations where the deployment group is present.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<MirroringLocation> locations;
+
+  /**
    * Immutable. Identifier. The resource name of this deployment group, for example:
    * `projects/123456789/locations/global/mirroringDeploymentGroups/my-dg`. See
    * https://google.aip.dev/122 for more details.
@@ -68,6 +75,13 @@ public final class MirroringDeploymentGroup extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Output only. The list of Mirroring Deployments that belong to this group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<MirroringDeploymentGroupDeployment> nestedDeployments;
 
   /**
    * Required. Immutable. The network that will be used for all child deployments, for example:
@@ -174,6 +188,23 @@ public final class MirroringDeploymentGroup extends com.google.api.client.json.G
   }
 
   /**
+   * Output only. The list of locations where the deployment group is present.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<MirroringLocation> getLocations() {
+    return locations;
+  }
+
+  /**
+   * Output only. The list of locations where the deployment group is present.
+   * @param locations locations or {@code null} for none
+   */
+  public MirroringDeploymentGroup setLocations(java.util.List<MirroringLocation> locations) {
+    this.locations = locations;
+    return this;
+  }
+
+  /**
    * Immutable. Identifier. The resource name of this deployment group, for example:
    * `projects/123456789/locations/global/mirroringDeploymentGroups/my-dg`. See
    * https://google.aip.dev/122 for more details.
@@ -191,6 +222,23 @@ public final class MirroringDeploymentGroup extends com.google.api.client.json.G
    */
   public MirroringDeploymentGroup setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The list of Mirroring Deployments that belong to this group.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<MirroringDeploymentGroupDeployment> getNestedDeployments() {
+    return nestedDeployments;
+  }
+
+  /**
+   * Output only. The list of Mirroring Deployments that belong to this group.
+   * @param nestedDeployments nestedDeployments or {@code null} for none
+   */
+  public MirroringDeploymentGroup setNestedDeployments(java.util.List<MirroringDeploymentGroupDeployment> nestedDeployments) {
+    this.nestedDeployments = nestedDeployments;
     return this;
   }
 

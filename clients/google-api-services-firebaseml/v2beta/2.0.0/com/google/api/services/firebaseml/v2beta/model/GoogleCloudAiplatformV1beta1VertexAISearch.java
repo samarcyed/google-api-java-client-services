@@ -39,6 +39,29 @@ public final class GoogleCloudAiplatformV1beta1VertexAISearch extends com.google
   private java.lang.String datastore;
 
   /**
+   * Optional. Fully-qualified Vertex AI Search engine resource ID. Format:
+   * `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String engine;
+
+  /**
+   * Optional. Filter strings to be passed to the search API.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String filter;
+
+  /**
+   * Optional. Number of search results to return per query. The default value is 10. The maximumm
+   * allowed value is 10.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxResults;
+
+  /**
    * Optional. Fully-qualified Vertex AI Search data store resource ID. Format:
    * `projects/{project}/locations/{location}/collections/{collection}/dataStores/{dataStore}`
    * @return value or {@code null} for none
@@ -54,6 +77,61 @@ public final class GoogleCloudAiplatformV1beta1VertexAISearch extends com.google
    */
   public GoogleCloudAiplatformV1beta1VertexAISearch setDatastore(java.lang.String datastore) {
     this.datastore = datastore;
+    return this;
+  }
+
+  /**
+   * Optional. Fully-qualified Vertex AI Search engine resource ID. Format:
+   * `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEngine() {
+    return engine;
+  }
+
+  /**
+   * Optional. Fully-qualified Vertex AI Search engine resource ID. Format:
+   * `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+   * @param engine engine or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1VertexAISearch setEngine(java.lang.String engine) {
+    this.engine = engine;
+    return this;
+  }
+
+  /**
+   * Optional. Filter strings to be passed to the search API.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFilter() {
+    return filter;
+  }
+
+  /**
+   * Optional. Filter strings to be passed to the search API.
+   * @param filter filter or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1VertexAISearch setFilter(java.lang.String filter) {
+    this.filter = filter;
+    return this;
+  }
+
+  /**
+   * Optional. Number of search results to return per query. The default value is 10. The maximumm
+   * allowed value is 10.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxResults() {
+    return maxResults;
+  }
+
+  /**
+   * Optional. Number of search results to return per query. The default value is 10. The maximumm
+   * allowed value is 10.
+   * @param maxResults maxResults or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1VertexAISearch setMaxResults(java.lang.Integer maxResults) {
+    this.maxResults = maxResults;
     return this;
   }
 

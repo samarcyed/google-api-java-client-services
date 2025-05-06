@@ -445,6 +445,29 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
         }
 
         /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> extraLocationTypes;
+
+        /** Optional. A list of extra location types that should be used as conditions for controlling the
+       visibility of the locations.
+         */
+        public java.util.List<java.lang.String> getExtraLocationTypes() {
+          return extraLocationTypes;
+        }
+
+        /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
+          this.extraLocationTypes = extraLocationTypes;
+          return this;
+        }
+
+        /**
          * A filter to narrow down results to a preferred subset. The filtering language accepts
          * strings like `"displayName=tokyo"`, and is documented in more detail in
          * [AIP-160](https://google.aip.dev/160).
@@ -688,23 +711,21 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
            * that if you must retry your request, the server can ignore the request if it has
-           * already been completed. The server guarantees that for at least 60 minutes since the
-           * first request. For example, consider a situation where you make an initial request and
-           * the request times out. If you make the request again with the same request ID, the
-           * server can check if original operation with the same request ID was received, and if
-           * so, ignores the second request. This prevents clients from accidentally creating
-           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
-           * UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * already been completed. The server guarantees that for 60 minutes since the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * ignores the second request This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
           /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
          must retry your request, the server can ignore the request if it has already been completed. The
-         server guarantees that for at least 60 minutes since the first request. For example, consider a
-         situation where you make an initial request and the request times out. If you make the request
-         again with the same request ID, the server can check if original operation with the same request ID
-         was received, and if so, ignores the second request. This prevents clients from accidentally
+         server guarantees that for 60 minutes since the first request. For example, consider a situation
+         where you make an initial request and the request times out. If you make the request again with the
+         same request ID, the server ignores the second request This prevents clients from accidentally
          creating duplicate commitments. The request ID must be a valid UUID with the exception that zero
          UUID is not supported (00000000-0000-0000-0000-000000000000).
            */
@@ -715,13 +736,12 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
            * that if you must retry your request, the server can ignore the request if it has
-           * already been completed. The server guarantees that for at least 60 minutes since the
-           * first request. For example, consider a situation where you make an initial request and
-           * the request times out. If you make the request again with the same request ID, the
-           * server can check if original operation with the same request ID was received, and if
-           * so, ignores the second request. This prevents clients from accidentally creating
-           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
-           * UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * already been completed. The server guarantees that for 60 minutes since the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * ignores the second request This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
            */
           public Create setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -869,23 +889,21 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
            * that if you must retry your request, the server can ignore the request if it has
-           * already been completed. The server guarantees that for at least 60 minutes after the
-           * first request. For example, consider a situation where you make an initial request and
-           * the request times out. If you make the request again with the same request ID, the
-           * server can check if original operation with the same request ID was received, and if
-           * so, ignores the second request. This prevents clients from accidentally creating
-           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
-           * UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * already been completed. The server guarantees that for 60 minutes after the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * ignores the second request This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
           /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
          must retry your request, the server can ignore the request if it has already been completed. The
-         server guarantees that for at least 60 minutes after the first request. For example, consider a
-         situation where you make an initial request and the request times out. If you make the request
-         again with the same request ID, the server can check if original operation with the same request ID
-         was received, and if so, ignores the second request. This prevents clients from accidentally
+         server guarantees that for 60 minutes after the first request. For example, consider a situation
+         where you make an initial request and the request times out. If you make the request again with the
+         same request ID, the server ignores the second request This prevents clients from accidentally
          creating duplicate commitments. The request ID must be a valid UUID with the exception that zero
          UUID is not supported (00000000-0000-0000-0000-000000000000).
            */
@@ -896,13 +914,12 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
            * that if you must retry your request, the server can ignore the request if it has
-           * already been completed. The server guarantees that for at least 60 minutes after the
-           * first request. For example, consider a situation where you make an initial request and
-           * the request times out. If you make the request again with the same request ID, the
-           * server can check if original operation with the same request ID was received, and if
-           * so, ignores the second request. This prevents clients from accidentally creating
-           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
-           * UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * already been completed. The server guarantees that for 60 minutes after the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * ignores the second request This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
            */
           public Delete setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -1069,8 +1086,8 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networkservices server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The project and location from which the `AuthzExtension` resources are listed, specified
-         *        in the following format: `projects/{project}/locations/{location}`.
+         * @param parent Required. The project and location from which the `AuthzExtension` resources are listed. These
+         *        values are specified in the following format: `projects/{project}/locations/{location}`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1096,8 +1113,8 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The project and location from which the `AuthzExtension` resources are listed, specified
-         *        in the following format: `projects/{project}/locations/{location}`.
+           * @param parent Required. The project and location from which the `AuthzExtension` resources are listed. These
+         *        values are specified in the following format: `projects/{project}/locations/{location}`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1177,13 +1194,14 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The project and location from which the `AuthzExtension` resources are
-           * listed, specified in the following format: `projects/{project}/locations/{location}`.
+           * listed. These values are specified in the following format:
+           * `projects/{project}/locations/{location}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The project and location from which the `AuthzExtension` resources are listed, specified
-         in the following format: `projects/{project}/locations/{location}`.
+          /** Required. The project and location from which the `AuthzExtension` resources are listed. These
+         values are specified in the following format: `projects/{project}/locations/{location}`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -1191,7 +1209,8 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The project and location from which the `AuthzExtension` resources are
-           * listed, specified in the following format: `projects/{project}/locations/{location}`.
+           * listed. These values are specified in the following format:
+           * `projects/{project}/locations/{location}`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1219,17 +1238,17 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
             return this;
           }
 
-          /** Optional. Hint for how to order the results. */
+          /** Optional. Hint about how to order the results. */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Optional. Hint for how to order the results.
+          /** Optional. Hint about how to order the results.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
-          /** Optional. Hint for how to order the results. */
+          /** Optional. Hint about how to order the results. */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;
@@ -1417,23 +1436,21 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
            * that if you must retry your request, the server can ignore the request if it has
-           * already been completed. The server guarantees that for at least 60 minutes since the
-           * first request. For example, consider a situation where you make an initial request and
-           * the request times out. If you make the request again with the same request ID, the
-           * server can check if original operation with the same request ID was received, and if
-           * so, ignores the second request. This prevents clients from accidentally creating
-           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
-           * UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * already been completed. The server guarantees that for 60 minutes since the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * ignores the second request This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
           /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
          must retry your request, the server can ignore the request if it has already been completed. The
-         server guarantees that for at least 60 minutes since the first request. For example, consider a
-         situation where you make an initial request and the request times out. If you make the request
-         again with the same request ID, the server can check if original operation with the same request ID
-         was received, and if so, ignores the second request. This prevents clients from accidentally
+         server guarantees that for 60 minutes since the first request. For example, consider a situation
+         where you make an initial request and the request times out. If you make the request again with the
+         same request ID, the server ignores the second request This prevents clients from accidentally
          creating duplicate commitments. The request ID must be a valid UUID with the exception that zero
          UUID is not supported (00000000-0000-0000-0000-000000000000).
            */
@@ -1444,13 +1461,12 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
            * that if you must retry your request, the server can ignore the request if it has
-           * already been completed. The server guarantees that for at least 60 minutes since the
-           * first request. For example, consider a situation where you make an initial request and
-           * the request times out. If you make the request again with the same request ID, the
-           * server can check if original operation with the same request ID was received, and if
-           * so, ignores the second request. This prevents clients from accidentally creating
-           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
-           * UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * already been completed. The server guarantees that for 60 minutes since the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * ignores the second request This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
            */
           public Patch setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -3704,6 +3720,31 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
             return this;
           }
 
+          /**
+           * Optional. If true, allow partial responses for multi-regional Aggregated List requests.
+           * Otherwise if one of the locations is down or unreachable, the Aggregated List request
+           * will fail.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean returnPartialSuccess;
+
+          /** Optional. If true, allow partial responses for multi-regional Aggregated List requests. Otherwise
+         if one of the locations is down or unreachable, the Aggregated List request will fail.
+           */
+          public java.lang.Boolean getReturnPartialSuccess() {
+            return returnPartialSuccess;
+          }
+
+          /**
+           * Optional. If true, allow partial responses for multi-regional Aggregated List requests.
+           * Otherwise if one of the locations is down or unreachable, the Aggregated List request
+           * will fail.
+           */
+          public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+            this.returnPartialSuccess = returnPartialSuccess;
+            return this;
+          }
+
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
@@ -5689,6 +5730,31 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
             return this;
           }
 
+          /**
+           * Optional. If true, allow partial responses for multi-regional Aggregated List requests.
+           * Otherwise if one of the locations is down or unreachable, the Aggregated List request
+           * will fail.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean returnPartialSuccess;
+
+          /** Optional. If true, allow partial responses for multi-regional Aggregated List requests. Otherwise
+         if one of the locations is down or unreachable, the Aggregated List request will fail.
+           */
+          public java.lang.Boolean getReturnPartialSuccess() {
+            return returnPartialSuccess;
+          }
+
+          /**
+           * Optional. If true, allow partial responses for multi-regional Aggregated List requests.
+           * Otherwise if one of the locations is down or unreachable, the Aggregated List request
+           * will fail.
+           */
+          public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+            this.returnPartialSuccess = returnPartialSuccess;
+            return this;
+          }
+
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
@@ -6506,6 +6572,31 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
             return this;
           }
 
+          /**
+           * Optional. If true, allow partial responses for multi-regional Aggregated List requests.
+           * Otherwise if one of the locations is down or unreachable, the Aggregated List request
+           * will fail.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean returnPartialSuccess;
+
+          /** Optional. If true, allow partial responses for multi-regional Aggregated List requests. Otherwise
+         if one of the locations is down or unreachable, the Aggregated List request will fail.
+           */
+          public java.lang.Boolean getReturnPartialSuccess() {
+            return returnPartialSuccess;
+          }
+
+          /**
+           * Optional. If true, allow partial responses for multi-regional Aggregated List requests.
+           * Otherwise if one of the locations is down or unreachable, the Aggregated List request
+           * will fail.
+           */
+          public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+            this.returnPartialSuccess = returnPartialSuccess;
+            return this;
+          }
+
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
@@ -6856,23 +6947,21 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
            * that if you must retry your request, the server can ignore the request if it has
-           * already been completed. The server guarantees that for at least 60 minutes since the
-           * first request. For example, consider a situation where you make an initial request and
-           * the request times out. If you make the request again with the same request ID, the
-           * server can check if original operation with the same request ID was received, and if
-           * so, ignores the second request. This prevents clients from accidentally creating
-           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
-           * UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * already been completed. The server guarantees that for 60 minutes since the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * ignores the second request This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
           /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
          must retry your request, the server can ignore the request if it has already been completed. The
-         server guarantees that for at least 60 minutes since the first request. For example, consider a
-         situation where you make an initial request and the request times out. If you make the request
-         again with the same request ID, the server can check if original operation with the same request ID
-         was received, and if so, ignores the second request. This prevents clients from accidentally
+         server guarantees that for 60 minutes since the first request. For example, consider a situation
+         where you make an initial request and the request times out. If you make the request again with the
+         same request ID, the server ignores the second request This prevents clients from accidentally
          creating duplicate commitments. The request ID must be a valid UUID with the exception that zero
          UUID is not supported (00000000-0000-0000-0000-000000000000).
            */
@@ -6883,13 +6972,12 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
            * that if you must retry your request, the server can ignore the request if it has
-           * already been completed. The server guarantees that for at least 60 minutes since the
-           * first request. For example, consider a situation where you make an initial request and
-           * the request times out. If you make the request again with the same request ID, the
-           * server can check if original operation with the same request ID was received, and if
-           * so, ignores the second request. This prevents clients from accidentally creating
-           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
-           * UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * already been completed. The server guarantees that for 60 minutes since the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * ignores the second request This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
            */
           public Create setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -7037,23 +7125,21 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
            * that if you must retry your request, the server can ignore the request if it has
-           * already been completed. The server guarantees that for at least 60 minutes after the
-           * first request. For example, consider a situation where you make an initial request and
-           * the request times out. If you make the request again with the same request ID, the
-           * server can check if original operation with the same request ID was received, and if
-           * so, ignores the second request. This prevents clients from accidentally creating
-           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
-           * UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * already been completed. The server guarantees that for 60 minutes after the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * ignores the second request This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
           /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
          must retry your request, the server can ignore the request if it has already been completed. The
-         server guarantees that for at least 60 minutes after the first request. For example, consider a
-         situation where you make an initial request and the request times out. If you make the request
-         again with the same request ID, the server can check if original operation with the same request ID
-         was received, and if so, ignores the second request. This prevents clients from accidentally
+         server guarantees that for 60 minutes after the first request. For example, consider a situation
+         where you make an initial request and the request times out. If you make the request again with the
+         same request ID, the server ignores the second request This prevents clients from accidentally
          creating duplicate commitments. The request ID must be a valid UUID with the exception that zero
          UUID is not supported (00000000-0000-0000-0000-000000000000).
            */
@@ -7064,13 +7150,12 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
            * that if you must retry your request, the server can ignore the request if it has
-           * already been completed. The server guarantees that for at least 60 minutes after the
-           * first request. For example, consider a situation where you make an initial request and
-           * the request times out. If you make the request again with the same request ID, the
-           * server can check if original operation with the same request ID was received, and if
-           * so, ignores the second request. This prevents clients from accidentally creating
-           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
-           * UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * already been completed. The server guarantees that for 60 minutes after the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * ignores the second request This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
            */
           public Delete setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -7237,8 +7322,8 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networkservices server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The project and location from which the `LbRouteExtension` resources are listed, specified
-         *        in the following format: `projects/{project}/locations/{location}`.
+         * @param parent Required. The project and location from which the `LbRouteExtension` resources are listed. These
+         *        values are specified in the following format: `projects/{project}/locations/{location}`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -7264,8 +7349,8 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The project and location from which the `LbRouteExtension` resources are listed, specified
-         *        in the following format: `projects/{project}/locations/{location}`.
+           * @param parent Required. The project and location from which the `LbRouteExtension` resources are listed. These
+         *        values are specified in the following format: `projects/{project}/locations/{location}`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -7345,13 +7430,14 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The project and location from which the `LbRouteExtension` resources are
-           * listed, specified in the following format: `projects/{project}/locations/{location}`.
+           * listed. These values are specified in the following format:
+           * `projects/{project}/locations/{location}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The project and location from which the `LbRouteExtension` resources are listed,
-         specified in the following format: `projects/{project}/locations/{location}`.
+          /** Required. The project and location from which the `LbRouteExtension` resources are listed. These
+         values are specified in the following format: `projects/{project}/locations/{location}`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -7359,7 +7445,8 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The project and location from which the `LbRouteExtension` resources are
-           * listed, specified in the following format: `projects/{project}/locations/{location}`.
+           * listed. These values are specified in the following format:
+           * `projects/{project}/locations/{location}`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -7387,17 +7474,17 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
             return this;
           }
 
-          /** Optional. Hint for how to order the results. */
+          /** Optional. Hint about how to order the results. */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Optional. Hint for how to order the results.
+          /** Optional. Hint about how to order the results.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
-          /** Optional. Hint for how to order the results. */
+          /** Optional. Hint about how to order the results. */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;
@@ -7585,23 +7672,21 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
            * that if you must retry your request, the server can ignore the request if it has
-           * already been completed. The server guarantees that for at least 60 minutes since the
-           * first request. For example, consider a situation where you make an initial request and
-           * the request times out. If you make the request again with the same request ID, the
-           * server can check if original operation with the same request ID was received, and if
-           * so, ignores the second request. This prevents clients from accidentally creating
-           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
-           * UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * already been completed. The server guarantees that for 60 minutes since the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * ignores the second request This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
           /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
          must retry your request, the server can ignore the request if it has already been completed. The
-         server guarantees that for at least 60 minutes since the first request. For example, consider a
-         situation where you make an initial request and the request times out. If you make the request
-         again with the same request ID, the server can check if original operation with the same request ID
-         was received, and if so, ignores the second request. This prevents clients from accidentally
+         server guarantees that for 60 minutes since the first request. For example, consider a situation
+         where you make an initial request and the request times out. If you make the request again with the
+         same request ID, the server ignores the second request This prevents clients from accidentally
          creating duplicate commitments. The request ID must be a valid UUID with the exception that zero
          UUID is not supported (00000000-0000-0000-0000-000000000000).
            */
@@ -7612,13 +7697,12 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
            * that if you must retry your request, the server can ignore the request if it has
-           * already been completed. The server guarantees that for at least 60 minutes since the
-           * first request. For example, consider a situation where you make an initial request and
-           * the request times out. If you make the request again with the same request ID, the
-           * server can check if original operation with the same request ID was received, and if
-           * so, ignores the second request. This prevents clients from accidentally creating
-           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
-           * UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * already been completed. The server guarantees that for 60 minutes since the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * ignores the second request This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
            */
           public Patch setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -7835,23 +7919,21 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
            * that if you must retry your request, the server can ignore the request if it has
-           * already been completed. The server guarantees that for at least 60 minutes since the
-           * first request. For example, consider a situation where you make an initial request and
-           * the request times out. If you make the request again with the same request ID, the
-           * server can check if original operation with the same request ID was received, and if
-           * so, ignores the second request. This prevents clients from accidentally creating
-           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
-           * UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * already been completed. The server guarantees that for 60 minutes since the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * ignores the second request This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
           /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
          must retry your request, the server can ignore the request if it has already been completed. The
-         server guarantees that for at least 60 minutes since the first request. For example, consider a
-         situation where you make an initial request and the request times out. If you make the request
-         again with the same request ID, the server can check if original operation with the same request ID
-         was received, and if so, ignores the second request. This prevents clients from accidentally
+         server guarantees that for 60 minutes since the first request. For example, consider a situation
+         where you make an initial request and the request times out. If you make the request again with the
+         same request ID, the server ignores the second request This prevents clients from accidentally
          creating duplicate commitments. The request ID must be a valid UUID with the exception that zero
          UUID is not supported (00000000-0000-0000-0000-000000000000).
            */
@@ -7862,13 +7944,12 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
            * that if you must retry your request, the server can ignore the request if it has
-           * already been completed. The server guarantees that for at least 60 minutes since the
-           * first request. For example, consider a situation where you make an initial request and
-           * the request times out. If you make the request again with the same request ID, the
-           * server can check if original operation with the same request ID was received, and if
-           * so, ignores the second request. This prevents clients from accidentally creating
-           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
-           * UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * already been completed. The server guarantees that for 60 minutes since the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * ignores the second request This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
            */
           public Create setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -8018,23 +8099,21 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
            * that if you must retry your request, the server can ignore the request if it has
-           * already been completed. The server guarantees that for at least 60 minutes after the
-           * first request. For example, consider a situation where you make an initial request and
-           * the request times out. If you make the request again with the same request ID, the
-           * server can check if original operation with the same request ID was received, and if
-           * so, ignores the second request. This prevents clients from accidentally creating
-           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
-           * UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * already been completed. The server guarantees that for 60 minutes after the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * ignores the second request This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
           /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
          must retry your request, the server can ignore the request if it has already been completed. The
-         server guarantees that for at least 60 minutes after the first request. For example, consider a
-         situation where you make an initial request and the request times out. If you make the request
-         again with the same request ID, the server can check if original operation with the same request ID
-         was received, and if so, ignores the second request. This prevents clients from accidentally
+         server guarantees that for 60 minutes after the first request. For example, consider a situation
+         where you make an initial request and the request times out. If you make the request again with the
+         same request ID, the server ignores the second request This prevents clients from accidentally
          creating duplicate commitments. The request ID must be a valid UUID with the exception that zero
          UUID is not supported (00000000-0000-0000-0000-000000000000).
            */
@@ -8045,13 +8124,12 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
            * that if you must retry your request, the server can ignore the request if it has
-           * already been completed. The server guarantees that for at least 60 minutes after the
-           * first request. For example, consider a situation where you make an initial request and
-           * the request times out. If you make the request again with the same request ID, the
-           * server can check if original operation with the same request ID was received, and if
-           * so, ignores the second request. This prevents clients from accidentally creating
-           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
-           * UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * already been completed. The server guarantees that for 60 minutes after the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * ignores the second request This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
            */
           public Delete setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -8218,8 +8296,8 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networkservices server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The project and location from which the `LbTrafficExtension` resources are listed,
-         *        specified in the following format: `projects/{project}/locations/{location}`.
+         * @param parent Required. The project and location from which the `LbTrafficExtension` resources are listed. These
+         *        values are specified in the following format: `projects/{project}/locations/{location}`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -8245,8 +8323,8 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The project and location from which the `LbTrafficExtension` resources are listed,
-         *        specified in the following format: `projects/{project}/locations/{location}`.
+           * @param parent Required. The project and location from which the `LbTrafficExtension` resources are listed. These
+         *        values are specified in the following format: `projects/{project}/locations/{location}`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -8326,13 +8404,14 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The project and location from which the `LbTrafficExtension` resources are
-           * listed, specified in the following format: `projects/{project}/locations/{location}`.
+           * listed. These values are specified in the following format:
+           * `projects/{project}/locations/{location}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The project and location from which the `LbTrafficExtension` resources are listed,
-         specified in the following format: `projects/{project}/locations/{location}`.
+          /** Required. The project and location from which the `LbTrafficExtension` resources are listed. These
+         values are specified in the following format: `projects/{project}/locations/{location}`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -8340,7 +8419,8 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The project and location from which the `LbTrafficExtension` resources are
-           * listed, specified in the following format: `projects/{project}/locations/{location}`.
+           * listed. These values are specified in the following format:
+           * `projects/{project}/locations/{location}`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -8368,17 +8448,17 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
             return this;
           }
 
-          /** Optional. Hint for how to order the results. */
+          /** Optional. Hint about how to order the results. */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Optional. Hint for how to order the results.
+          /** Optional. Hint about how to order the results.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
-          /** Optional. Hint for how to order the results. */
+          /** Optional. Hint about how to order the results. */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;
@@ -8568,23 +8648,21 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
            * that if you must retry your request, the server can ignore the request if it has
-           * already been completed. The server guarantees that for at least 60 minutes since the
-           * first request. For example, consider a situation where you make an initial request and
-           * the request times out. If you make the request again with the same request ID, the
-           * server can check if original operation with the same request ID was received, and if
-           * so, ignores the second request. This prevents clients from accidentally creating
-           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
-           * UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * already been completed. The server guarantees that for 60 minutes since the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * ignores the second request This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
           /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
          must retry your request, the server can ignore the request if it has already been completed. The
-         server guarantees that for at least 60 minutes since the first request. For example, consider a
-         situation where you make an initial request and the request times out. If you make the request
-         again with the same request ID, the server can check if original operation with the same request ID
-         was received, and if so, ignores the second request. This prevents clients from accidentally
+         server guarantees that for 60 minutes since the first request. For example, consider a situation
+         where you make an initial request and the request times out. If you make the request again with the
+         same request ID, the server ignores the second request This prevents clients from accidentally
          creating duplicate commitments. The request ID must be a valid UUID with the exception that zero
          UUID is not supported (00000000-0000-0000-0000-000000000000).
            */
@@ -8595,13 +8673,12 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
            * that if you must retry your request, the server can ignore the request if it has
-           * already been completed. The server guarantees that for at least 60 minutes since the
-           * first request. For example, consider a situation where you make an initial request and
-           * the request times out. If you make the request again with the same request ID, the
-           * server can check if original operation with the same request ID was received, and if
-           * so, ignores the second request. This prevents clients from accidentally creating
-           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
-           * UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * already been completed. The server guarantees that for 60 minutes since the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * ignores the second request This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
            */
           public Patch setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -9276,6 +9353,31 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * Optional. If true, allow partial responses for multi-regional Aggregated List requests.
+           * Otherwise if one of the locations is down or unreachable, the Aggregated List request
+           * will fail.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean returnPartialSuccess;
+
+          /** Optional. If true, allow partial responses for multi-regional Aggregated List requests. Otherwise
+         if one of the locations is down or unreachable, the Aggregated List request will fail.
+           */
+          public java.lang.Boolean getReturnPartialSuccess() {
+            return returnPartialSuccess;
+          }
+
+          /**
+           * Optional. If true, allow partial responses for multi-regional Aggregated List requests.
+           * Otherwise if one of the locations is down or unreachable, the Aggregated List request
+           * will fail.
+           */
+          public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+            this.returnPartialSuccess = returnPartialSuccess;
             return this;
           }
 
@@ -10465,8 +10567,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networkservices server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource of the ServiceBinding. Must be in the format
-         *        `projects/locations/global`.
+         * @param parent Required. The parent resource of the ServiceBinding. Must be in the format `projects/locations`.
          * @param content the {@link com.google.api.services.networkservices.v1.model.ServiceBinding}
          * @return the request
          */
@@ -10494,8 +10595,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource of the ServiceBinding. Must be in the format
-         *        `projects/locations/global`.
+           * @param parent Required. The parent resource of the ServiceBinding. Must be in the format `projects/locations`.
            * @param content the {@link com.google.api.services.networkservices.v1.model.ServiceBinding}
            * @since 1.13
            */
@@ -10566,13 +10666,12 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The parent resource of the ServiceBinding. Must be in the format
-           * `projects/locations/global`.
+           * `projects/locations`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource of the ServiceBinding. Must be in the format
-         `projects/locations/global`.
+          /** Required. The parent resource of the ServiceBinding. Must be in the format `projects/locations`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -10580,7 +10679,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The parent resource of the ServiceBinding. Must be in the format
-           * `projects/locations/global`.
+           * `projects/locations`.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -10622,7 +10721,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name Required. A name of the ServiceBinding to delete. Must be in the format
-         *        `projects/locations/global/serviceBindings`.
+         *        `projects/locations/serviceBindings`.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -10650,7 +10749,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. A name of the ServiceBinding to delete. Must be in the format
-         *        `projects/locations/global/serviceBindings`.
+         *        `projects/locations/serviceBindings`.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -10720,13 +10819,13 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. A name of the ServiceBinding to delete. Must be in the format
-           * `projects/locations/global/serviceBindings`.
+           * `projects/locations/serviceBindings`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. A name of the ServiceBinding to delete. Must be in the format
-         `projects/locations/global/serviceBindings`.
+         `projects/locations/serviceBindings`.
            */
           public java.lang.String getName() {
             return name;
@@ -10734,7 +10833,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. A name of the ServiceBinding to delete. Must be in the format
-           * `projects/locations/global/serviceBindings`.
+           * `projects/locations/serviceBindings`.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -10760,7 +10859,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. A name of the ServiceBinding to get. Must be in the format
-         *        `projects/locations/global/serviceBindings`.
+         *        `projects/locations/serviceBindings`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -10787,7 +10886,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. A name of the ServiceBinding to get. Must be in the format
-         *        `projects/locations/global/serviceBindings`.
+         *        `projects/locations/serviceBindings`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -10867,13 +10966,13 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. A name of the ServiceBinding to get. Must be in the format
-           * `projects/locations/global/serviceBindings`.
+           * `projects/locations/serviceBindings`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. A name of the ServiceBinding to get. Must be in the format
-         `projects/locations/global/serviceBindings`.
+         `projects/locations/serviceBindings`.
            */
           public java.lang.String getName() {
             return name;
@@ -10881,7 +10980,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. A name of the ServiceBinding to get. Must be in the format
-           * `projects/locations/global/serviceBindings`.
+           * `projects/locations/serviceBindings`.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -10907,7 +11006,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The project and location from which the ServiceBindings should be listed, specified in the
-         *        format `projects/locations/global`.
+         *        format `projects/locations`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -10934,7 +11033,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The project and location from which the ServiceBindings should be listed, specified in the
-         *        format `projects/locations/global`.
+         *        format `projects/locations`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -11014,13 +11113,13 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The project and location from which the ServiceBindings should be listed,
-           * specified in the format `projects/locations/global`.
+           * specified in the format `projects/locations`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The project and location from which the ServiceBindings should be listed, specified in
-         the format `projects/locations/global`.
+         the format `projects/locations`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -11028,7 +11127,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The project and location from which the ServiceBindings should be listed,
-           * specified in the format `projects/locations/global`.
+           * specified in the format `projects/locations`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -12562,6 +12661,31 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
             return this;
           }
 
+          /**
+           * Optional. If true, allow partial responses for multi-regional Aggregated List requests.
+           * Otherwise if one of the locations is down or unreachable, the Aggregated List request
+           * will fail.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean returnPartialSuccess;
+
+          /** Optional. If true, allow partial responses for multi-regional Aggregated List requests. Otherwise
+         if one of the locations is down or unreachable, the Aggregated List request will fail.
+           */
+          public java.lang.Boolean getReturnPartialSuccess() {
+            return returnPartialSuccess;
+          }
+
+          /**
+           * Optional. If true, allow partial responses for multi-regional Aggregated List requests.
+           * Otherwise if one of the locations is down or unreachable, the Aggregated List request
+           * will fail.
+           */
+          public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+            this.returnPartialSuccess = returnPartialSuccess;
+            return this;
+          }
+
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
@@ -13376,6 +13500,31 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * Optional. If true, allow partial responses for multi-regional Aggregated List requests.
+           * Otherwise if one of the locations is down or unreachable, the Aggregated List request
+           * will fail.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean returnPartialSuccess;
+
+          /** Optional. If true, allow partial responses for multi-regional Aggregated List requests. Otherwise
+         if one of the locations is down or unreachable, the Aggregated List request will fail.
+           */
+          public java.lang.Boolean getReturnPartialSuccess() {
+            return returnPartialSuccess;
+          }
+
+          /**
+           * Optional. If true, allow partial responses for multi-regional Aggregated List requests.
+           * Otherwise if one of the locations is down or unreachable, the Aggregated List request
+           * will fail.
+           */
+          public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+            this.returnPartialSuccess = returnPartialSuccess;
             return this;
           }
 

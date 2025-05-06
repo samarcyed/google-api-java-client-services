@@ -39,11 +39,38 @@ public final class GoogleCloudAiplatformV1beta1ImportRagFilesConfig extends com.
   private GoogleCloudAiplatformV1beta1GcsSource gcsSource;
 
   /**
+   * Optional. The max number of queries per minute that the indexing pipeline job is allowed to
+   * make to the embedding model specified in the project. Please follow the quota usage guideline
+   * of the embedding model you use to set the value properly.If this value is not specified,
+   * max_embedding_requests_per_min will be used by indexing pipeline job as the global limit.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer globalMaxEmbeddingRequestsPerMin;
+
+  /**
    * Google Drive location. Supports importing individual files as well as Google Drive folders.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1GoogleDriveSource googleDriveSource;
+
+  /**
+   * The BigQuery destination to write import result to. It should be a bigquery table resource name
+   * (e.g. "bq://projectId.bqDatasetId.bqTableId"). The dataset must exist. If the table does not
+   * exist, it will be created with the expected schema. If the table exists, the schema will be
+   * validated and data will be added to this existing table.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1BigQueryDestination importResultBigquerySink;
+
+  /**
+   * The Cloud Storage path to write import result to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1GcsDestination importResultGcsSink;
 
   /**
    * Jira queries with their corresponding authentication.
@@ -139,6 +166,29 @@ public final class GoogleCloudAiplatformV1beta1ImportRagFilesConfig extends com.
   }
 
   /**
+   * Optional. The max number of queries per minute that the indexing pipeline job is allowed to
+   * make to the embedding model specified in the project. Please follow the quota usage guideline
+   * of the embedding model you use to set the value properly.If this value is not specified,
+   * max_embedding_requests_per_min will be used by indexing pipeline job as the global limit.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getGlobalMaxEmbeddingRequestsPerMin() {
+    return globalMaxEmbeddingRequestsPerMin;
+  }
+
+  /**
+   * Optional. The max number of queries per minute that the indexing pipeline job is allowed to
+   * make to the embedding model specified in the project. Please follow the quota usage guideline
+   * of the embedding model you use to set the value properly.If this value is not specified,
+   * max_embedding_requests_per_min will be used by indexing pipeline job as the global limit.
+   * @param globalMaxEmbeddingRequestsPerMin globalMaxEmbeddingRequestsPerMin or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ImportRagFilesConfig setGlobalMaxEmbeddingRequestsPerMin(java.lang.Integer globalMaxEmbeddingRequestsPerMin) {
+    this.globalMaxEmbeddingRequestsPerMin = globalMaxEmbeddingRequestsPerMin;
+    return this;
+  }
+
+  /**
    * Google Drive location. Supports importing individual files as well as Google Drive folders.
    * @return value or {@code null} for none
    */
@@ -152,6 +202,46 @@ public final class GoogleCloudAiplatformV1beta1ImportRagFilesConfig extends com.
    */
   public GoogleCloudAiplatformV1beta1ImportRagFilesConfig setGoogleDriveSource(GoogleCloudAiplatformV1beta1GoogleDriveSource googleDriveSource) {
     this.googleDriveSource = googleDriveSource;
+    return this;
+  }
+
+  /**
+   * The BigQuery destination to write import result to. It should be a bigquery table resource name
+   * (e.g. "bq://projectId.bqDatasetId.bqTableId"). The dataset must exist. If the table does not
+   * exist, it will be created with the expected schema. If the table exists, the schema will be
+   * validated and data will be added to this existing table.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1BigQueryDestination getImportResultBigquerySink() {
+    return importResultBigquerySink;
+  }
+
+  /**
+   * The BigQuery destination to write import result to. It should be a bigquery table resource name
+   * (e.g. "bq://projectId.bqDatasetId.bqTableId"). The dataset must exist. If the table does not
+   * exist, it will be created with the expected schema. If the table exists, the schema will be
+   * validated and data will be added to this existing table.
+   * @param importResultBigquerySink importResultBigquerySink or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ImportRagFilesConfig setImportResultBigquerySink(GoogleCloudAiplatformV1beta1BigQueryDestination importResultBigquerySink) {
+    this.importResultBigquerySink = importResultBigquerySink;
+    return this;
+  }
+
+  /**
+   * The Cloud Storage path to write import result to.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GcsDestination getImportResultGcsSink() {
+    return importResultGcsSink;
+  }
+
+  /**
+   * The Cloud Storage path to write import result to.
+   * @param importResultGcsSink importResultGcsSink or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ImportRagFilesConfig setImportResultGcsSink(GoogleCloudAiplatformV1beta1GcsDestination importResultGcsSink) {
+    this.importResultGcsSink = importResultGcsSink;
     return this;
   }
 

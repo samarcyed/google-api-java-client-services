@@ -49,7 +49,7 @@ public class GKEOnPrem extends com.google.api.client.googleapis.services.json.Ab
         com.google.api.client.googleapis.GoogleUtils.MAJOR_VERSION >= 2,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.31.1 of google-api-client to run version " +
-        "2.0.0 of the GDC Virtual API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "2.0.0 of the GKE On-Prem API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -441,6 +441,29 @@ public class GKEOnPrem extends com.google.api.client.googleapis.services.json.Ab
                 "^projects/[^/]+$");
           }
           this.name = name;
+          return this;
+        }
+
+        /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> extraLocationTypes;
+
+        /** Optional. A list of extra location types that should be used as conditions for controlling the
+       visibility of the locations.
+         */
+        public java.util.List<java.lang.String> getExtraLocationTypes() {
+          return extraLocationTypes;
+        }
+
+        /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
+          this.extraLocationTypes = extraLocationTypes;
           return this;
         }
 

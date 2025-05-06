@@ -32,7 +32,15 @@ package com.google.api.services.analyticshub.v1.model;
 public final class Listing extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Shared dataset i.e. BigQuery dataset source.
+   * Optional. If true, the listing is only available to get the resource metadata. Listing is non
+   * subscribable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean allowOnlyMetadataSharing;
+
+  /**
+   * Shared dataset i.e. BigQuery dataset source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -132,7 +140,7 @@ public final class Listing extends com.google.api.client.json.GenericJson {
   private Publisher publisher;
 
   /**
-   * Required. Pub/Sub topic source.
+   * Pub/Sub topic source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -169,7 +177,26 @@ public final class Listing extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
-   * Required. Shared dataset i.e. BigQuery dataset source.
+   * Optional. If true, the listing is only available to get the resource metadata. Listing is non
+   * subscribable.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAllowOnlyMetadataSharing() {
+    return allowOnlyMetadataSharing;
+  }
+
+  /**
+   * Optional. If true, the listing is only available to get the resource metadata. Listing is non
+   * subscribable.
+   * @param allowOnlyMetadataSharing allowOnlyMetadataSharing or {@code null} for none
+   */
+  public Listing setAllowOnlyMetadataSharing(java.lang.Boolean allowOnlyMetadataSharing) {
+    this.allowOnlyMetadataSharing = allowOnlyMetadataSharing;
+    return this;
+  }
+
+  /**
+   * Shared dataset i.e. BigQuery dataset source.
    * @return value or {@code null} for none
    */
   public BigQueryDatasetSource getBigqueryDataset() {
@@ -177,7 +204,7 @@ public final class Listing extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Shared dataset i.e. BigQuery dataset source.
+   * Shared dataset i.e. BigQuery dataset source.
    * @param bigqueryDataset bigqueryDataset or {@code null} for none
    */
   public Listing setBigqueryDataset(BigQueryDatasetSource bigqueryDataset) {
@@ -442,7 +469,7 @@ public final class Listing extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Pub/Sub topic source.
+   * Pub/Sub topic source.
    * @return value or {@code null} for none
    */
   public PubSubTopicSource getPubsubTopic() {
@@ -450,7 +477,7 @@ public final class Listing extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Pub/Sub topic source.
+   * Pub/Sub topic source.
    * @param pubsubTopic pubsubTopic or {@code null} for none
    */
   public Listing setPubsubTopic(PubSubTopicSource pubsubTopic) {

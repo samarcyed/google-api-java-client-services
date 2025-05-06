@@ -20,7 +20,7 @@ package com.google.api.services.retail.v2beta.model;
  * The inventory information at a place (e.g. a store) identified by a place ID.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Vertex AI Search for Retail API. For a detailed
+ * transmitted over HTTP when working with the Vertex AI Search for commerce API. For a detailed
  * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
@@ -59,7 +59,10 @@ public final class GoogleCloudRetailV2betaLocalInventory extends com.google.api.
    * For primary products with no variants set the true availability at the primary level.
    * Corresponding properties: Google Merchant Center property
    * [availability](https://support.google.com/merchants/answer/6324448). Schema.org property
-   * [Offer.availability](https://schema.org/availability).
+   * [Offer.availability](https://schema.org/availability). This field is currently only used by the
+   * Recommendations API. For Search, please make use of fulfillment_types or custom attributes for
+   * similar behaviour. See [here]( https://cloud.google.com/retail/docs/local-inventory-
+   * updates#local-inventory-update-methods) for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,7 +82,7 @@ public final class GoogleCloudRetailV2betaLocalInventory extends com.google.api.
   private java.util.List<java.lang.String> fulfillmentTypes;
 
   /**
-   * Required. The place ID for the current set of inventory information.
+   * Optional. The place ID for the current set of inventory information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,7 +137,10 @@ public final class GoogleCloudRetailV2betaLocalInventory extends com.google.api.
    * For primary products with no variants set the true availability at the primary level.
    * Corresponding properties: Google Merchant Center property
    * [availability](https://support.google.com/merchants/answer/6324448). Schema.org property
-   * [Offer.availability](https://schema.org/availability).
+   * [Offer.availability](https://schema.org/availability). This field is currently only used by the
+   * Recommendations API. For Search, please make use of fulfillment_types or custom attributes for
+   * similar behaviour. See [here]( https://cloud.google.com/retail/docs/local-inventory-
+   * updates#local-inventory-update-methods) for more details.
    * @return value or {@code null} for none
    */
   public java.lang.String getAvailability() {
@@ -149,7 +155,10 @@ public final class GoogleCloudRetailV2betaLocalInventory extends com.google.api.
    * For primary products with no variants set the true availability at the primary level.
    * Corresponding properties: Google Merchant Center property
    * [availability](https://support.google.com/merchants/answer/6324448). Schema.org property
-   * [Offer.availability](https://schema.org/availability).
+   * [Offer.availability](https://schema.org/availability). This field is currently only used by the
+   * Recommendations API. For Search, please make use of fulfillment_types or custom attributes for
+   * similar behaviour. See [here]( https://cloud.google.com/retail/docs/local-inventory-
+   * updates#local-inventory-update-methods) for more details.
    * @param availability availability or {@code null} for none
    */
   public GoogleCloudRetailV2betaLocalInventory setAvailability(java.lang.String availability) {
@@ -187,7 +196,7 @@ public final class GoogleCloudRetailV2betaLocalInventory extends com.google.api.
   }
 
   /**
-   * Required. The place ID for the current set of inventory information.
+   * Optional. The place ID for the current set of inventory information.
    * @return value or {@code null} for none
    */
   public java.lang.String getPlaceId() {
@@ -195,7 +204,7 @@ public final class GoogleCloudRetailV2betaLocalInventory extends com.google.api.
   }
 
   /**
-   * Required. The place ID for the current set of inventory information.
+   * Optional. The place ID for the current set of inventory information.
    * @param placeId placeId or {@code null} for none
    */
   public GoogleCloudRetailV2betaLocalInventory setPlaceId(java.lang.String placeId) {
