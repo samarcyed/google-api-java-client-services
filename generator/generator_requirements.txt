@@ -14,7 +14,7 @@ cachetools==3.1.1 \
     # via
     #   -r generator/generator_requirements.in
     #   google-auth
-django==1.8.16 \
+django==4.2.21 \
     --hash=sha256:224aaf17a28609707d942deafe6d0a5b382baf22a6f33e4e61c56c62f09081dd \
     --hash=sha256:cc3a95187788627dfdc94b41de908aadfc4241fabb3ceaef19f4bd3b89c0fdf7
     # via -r generator/generator_requirements.in
